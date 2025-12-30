@@ -69,7 +69,7 @@
 <body>
     <div class="container">
         <h1>Privacy Policy for Score Keeper</h1>
-        <p class="last-updated"><strong>Last Updated:</strong> December 17, 2025</p>
+        <p class="last-updated"><strong>Last Updated:</strong> December 30, 2025</p>
 
         <h2>Introduction</h2>
         <p>Score Keeper ("we," "our," or "the app") is a local-first score tracking application for board games and card games. This Privacy Policy explains how information is collected, used, and shared when you use our mobile application.</p>
@@ -80,10 +80,13 @@
         <p>All game data and scores you create in Score Keeper are stored <strong>locally on your device only</strong>. This includes:</p>
         <ul>
             <li>Player names and scores</li>
-            <li>Game history and undo states</li>
+            <li>Game history (up to 10 games) and undo states</li>
+            <li>Round-based scoring data (for multi-round games)</li>
             <li>App preferences and settings</li>
             <li>Orientation mode preferences</li>
             <li>Audio playback settings</li>
+            <li>Player name autocomplete suggestions</li>
+            <li>Session statistics (number of app opens, total games played, last game date)</li>
         </ul>
         <p class="important"><strong>We do not have access to this data. It never leaves your device.</strong></p>
 
@@ -94,11 +97,15 @@
         <ul>
             <li>Device information (device model, operating system version)</li>
             <li>App usage data (screens viewed, features used, session duration)</li>
+            <li>Game session metrics (player count, game duration, rounds played)</li>
+            <li>Feature usage (timer usage, player customization, orientation modes, music player interactions)</li>
+            <li>Engagement metrics (app opens, session count, days since last game, total games played)</li>
+            <li>Performance data (page load times, history load times)</li>
             <li>General location information (country/region based on IP address)</li>
             <li>App crashes and performance data</li>
             <li>Device identifiers (Firebase Installation ID, Advertising ID)</li>
         </ul>
-        <p><strong>Important:</strong> Firebase Analytics does not collect player names, scores, or any game content you create.</p>
+        <p><strong>Important:</strong> Firebase Analytics does not collect player names, scores, or any game content you create. All analytics are aggregated and anonymous.</p>
         <p>For more information about how Google uses data:</p>
         <ul>
             <li><a href="https://firebase.google.com/support/privacy" target="_blank">Firebase Privacy and Security</a></li>
@@ -121,9 +128,20 @@
         </ul>
         <p>You can opt out of personalized advertising by adjusting your device's advertising settings:</p>
         <ul>
-            <li><strong>iOS:</strong> Settings &gt; Privacy &gt; Advertising &gt; Limit Ad Tracking</li>
+            <li><strong>iOS:</strong> Settings &gt; Privacy &amp; Security &gt; Tracking &gt; Allow Apps to Request to Track</li>
             <li><strong>Android:</strong> Settings &gt; Google &gt; Ads &gt; Opt out of Ads Personalization</li>
         </ul>
+
+        <h4>App Tracking Transparency (iOS)</h4>
+        <p>On iOS devices (iOS 14.5 and later), we request your permission before tracking your activity across other companies' apps and websites. When you first open the app, you'll see a system dialog asking:</p>
+        <p><em>"Allow Score Keeper to track your activity across other companies' apps and websites?"</em></p>
+        <p>Your choice:</p>
+        <ul>
+            <li><strong>Allow Tracking:</strong> Enables personalized ads and helps support app development</li>
+            <li><strong>Ask App Not to Track:</strong> Limits personalized advertising but you'll still see ads (they just won't be personalized)</li>
+        </ul>
+        <p>You can change your tracking preference at any time in: Settings &gt; Privacy &amp; Security &gt; Tracking &gt; Score Keeper</p>
+        <p>Your tracking choice is stored locally on your device and is respected by our advertising partners.</p>
 
         <h4>Sentry (Error Tracking)</h4>
         <p>We use Sentry to monitor app performance and track errors to improve app stability. Sentry may collect:</p>
