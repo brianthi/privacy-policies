@@ -103,61 +103,28 @@
             <li>Performance data (page load times, history load times)</li>
             <li>General location information (country/region based on IP address)</li>
             <li>App crashes and performance data</li>
-            <li>Device identifiers (Firebase Installation ID, Advertising ID)</li>
+            <li>Device identifiers (Firebase Installation ID only - not used for tracking)</li>
         </ul>
-        <p><strong>Important:</strong> Firebase Analytics does not collect player names, scores, or any game content you create. All analytics are aggregated and anonymous.</p>
+        <p><strong>Important:</strong> Firebase Analytics does not collect player names, scores, or any game content you create. All analytics are aggregated and anonymous. We do NOT use advertising identifiers (IDFA/AAID) for tracking.</p>
         <p>For more information about how Google uses data:</p>
         <ul>
             <li><a href="https://firebase.google.com/support/privacy" target="_blank">Firebase Privacy and Security</a></li>
             <li><a href="https://policies.google.com/privacy" target="_blank">Google Privacy Policy</a></li>
         </ul>
 
-        <h4>Google AdMob (Advertising)</h4>
-        <p>We use Google AdMob to display advertisements in the app. AdMob may collect and use the following information:</p>
+        <h4>Google AdMob (Non-Personalized Advertising)</h4>
+        <p>We use Google AdMob to display <strong>non-personalized advertisements</strong> in the app. Non-personalized ads are not based on your personal data or browsing history. AdMob may collect limited information for ad serving:</p>
         <ul>
-            <li>Advertising identifiers (e.g., Google Advertising ID)</li>
-            <li>IP address</li>
+            <li>IP address (for general location and ad serving)</li>
             <li>Device information (device type, operating system)</li>
-            <li>General location information (country/region)</li>
-            <li>Ad interaction data</li>
+            <li>Ad interaction data (views, clicks)</li>
         </ul>
+        <p><strong>Important:</strong> We do NOT collect or use advertising identifiers (IDFA/AAID) for personalized advertising or cross-app tracking. Ads are generic and contextual only.</p>
         <p>For more information:</p>
         <ul>
             <li><a href="https://policies.google.com/privacy" target="_blank">Google Privacy Policy</a></li>
             <li><a href="https://policies.google.com/technologies/partner-sites" target="_blank">How Google uses information from sites or apps that use our services</a></li>
         </ul>
-        <p>You can opt out of personalized advertising by adjusting your device's advertising settings:</p>
-        <ul>
-            <li><strong>iOS:</strong> Settings &gt; Privacy &amp; Security &gt; Tracking &gt; Allow Apps to Request to Track</li>
-            <li><strong>Android:</strong> Settings &gt; Google &gt; Ads &gt; Opt out of Ads Personalization</li>
-        </ul>
-
-        <h4>App Tracking Transparency (iOS)</h4>
-        <p>On iOS devices (iOS 14.5 and later), we request your permission before tracking your activity across other companies' apps and websites. When you first open the app, you'll see a system dialog asking:</p>
-        <p><em>"Allow Score Keeper to track your activity across other companies' apps and websites?"</em></p>
-        <p>Your choice:</p>
-        <ul>
-            <li><strong>Allow Tracking:</strong> Enables personalized ads and helps support app development</li>
-            <li><strong>Ask App Not to Track:</strong> Limits personalized advertising but you'll still see ads (they just won't be personalized)</li>
-        </ul>
-        <p>You can change your tracking preference at any time in: Settings &gt; Privacy &amp; Security &gt; Tracking &gt; Score Keeper</p>
-        <p>Your tracking choice is stored locally on your device and is respected by our advertising partners.</p>
-
-        <h4>GDPR &amp; CCPA Consent (Europe &amp; California)</h4>
-        <p>If you're located in the European Economic Area (EEA), United Kingdom, or California, we use Google's User Messaging Platform (UMP) to obtain your consent for data collection and personalized advertising.</p>
-        <p>When you first open the app, you may see a consent dialog that explains:</p>
-        <ul>
-            <li>What data we collect (analytics, advertising data)</li>
-            <li>Who we share data with (Google, advertising partners)</li>
-            <li>Your privacy choices</li>
-        </ul>
-        <p><strong>Your Options:</strong></p>
-        <ul>
-            <li><strong>Accept:</strong> Allows personalized ads and full analytics</li>
-            <li><strong>Reject:</strong> Limits data collection to essential analytics only; ads will be non-personalized</li>
-            <li><strong>Manage Options:</strong> Customize exactly what data you're comfortable sharing</li>
-        </ul>
-        <p>Your consent choice is stored and can be changed at any time through the app's privacy settings. We fully respect your choice and comply with GDPR and CCPA regulations.</p>
 
         <h4>Sentry (Error Tracking)</h4>
         <p>We use Sentry to monitor app performance and track errors to improve app stability. Sentry may collect:</p>
@@ -204,7 +171,6 @@
         <p>You have the right to:</p>
         <ul>
             <li>Delete all local data by uninstalling the app or clearing app data</li>
-            <li>Opt out of personalized advertising through your device settings</li>
             <li>Opt out of Firebase Analytics by disabling analytics in your device settings</li>
             <li>Request information about what data has been collected (contact us at the email below)</li>
         </ul>
