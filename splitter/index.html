@@ -1,0 +1,406 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Splitter support — get help, find answers, and contact us." />
+  <title>Splitter Support — Daybreak Labs</title>
+
+  <meta property="og:title" content="Splitter Support" />
+  <meta property="og:description" content="Get help with Splitter, the local-first expense splitting app." />
+  <meta property="og:type" content="website" />
+
+  <style>
+    :root{
+      --bg: #0b1020;
+      --card: rgba(255,255,255,0.06);
+      --text: rgba(255,255,255,0.92);
+      --muted: rgba(255,255,255,0.72);
+      --faint: rgba(255,255,255,0.55);
+      --border: rgba(255,255,255,0.12);
+      --accent: rgba(255,255,255,0.10);
+      --max: 900px;
+      --radius: 16px;
+    }
+
+    * { box-sizing: border-box; }
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+      color: var(--text);
+      background:
+        radial-gradient(1200px 600px at 20% 0%, rgba(255,255,255,0.10), transparent 55%),
+        radial-gradient(900px 500px at 90% 10%, rgba(255,255,255,0.08), transparent 60%),
+        radial-gradient(900px 700px at 50% 100%, rgba(255,255,255,0.06), transparent 60%),
+        var(--bg);
+      line-height: 1.5;
+    }
+
+    a{ color: var(--text); text-decoration: none; }
+    a:hover{ text-decoration: underline; }
+
+    .wrap{
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 48px 20px 36px;
+    }
+
+    header{
+      display:flex;
+      justify-content:space-between;
+      align-items:flex-start;
+      gap:16px;
+      margin-bottom:28px;
+    }
+
+    .back{
+      font-size:13px;
+      color: var(--faint);
+      white-space:nowrap;
+      padding-top:6px;
+    }
+
+    .back:hover{ color: var(--muted); text-decoration:none; }
+
+    .title{
+      font-size: clamp(28px, 3.2vw, 40px);
+      margin:0;
+      font-weight:700;
+    }
+
+    .subtitle{
+      margin-top:6px;
+      color: var(--muted);
+      max-width:60ch;
+      font-size:15px;
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap:18px;
+    }
+
+    @media (max-width: 820px){
+      .grid{ grid-template-columns: 1fr; }
+      header{ flex-direction:column-reverse; }
+    }
+
+    .card{
+      background: var(--card);
+      border:1px solid var(--border);
+      border-radius: var(--radius);
+      padding:20px;
+    }
+
+    .full{ grid-column: 1 / -1; }
+
+    h2{
+      font-size:16px;
+      font-weight:600;
+      margin:0 0 12px 0;
+      color: var(--text);
+    }
+
+    p{ color: var(--muted); margin:0 0 10px 0; font-size:14px; }
+    p:last-child{ margin-bottom:0; }
+
+    .email-link{
+      display:inline-block;
+      margin-top:6px;
+      font-size:15px;
+      color: var(--text);
+      border-bottom:1px solid var(--border);
+      padding-bottom:1px;
+    }
+
+    .email-link:hover{
+      border-color: var(--muted);
+      text-decoration:none;
+    }
+
+    .hint{
+      margin-top:8px;
+      font-size:13px;
+      color: var(--faint);
+    }
+
+    .contact-form{
+      margin-top:16px;
+      display:grid;
+      gap:10px;
+    }
+
+    .contact-form label{
+      font-size:13px;
+      color: var(--muted);
+    }
+
+    .contact-form input,
+    .contact-form select,
+    .contact-form textarea{
+      width:100%;
+      margin-top:6px;
+      border:1px solid var(--border);
+      background: rgba(255,255,255,0.03);
+      color: var(--text);
+      border-radius:10px;
+      padding:10px 11px;
+      font: inherit;
+      font-size:14px;
+    }
+
+    .contact-form textarea{
+      min-height:120px;
+      resize:vertical;
+    }
+
+    .contact-form button{
+      width:max-content;
+      border:1px solid var(--border);
+      background: rgba(255,255,255,0.08);
+      color: var(--text);
+      border-radius:999px;
+      padding:10px 14px;
+      font-size:13px;
+      cursor:pointer;
+    }
+
+    .contact-form button:hover{
+      background: var(--accent);
+    }
+
+    /* FAQ */
+    .faq-list{
+      display:flex;
+      flex-direction:column;
+      gap:0;
+    }
+
+    details{
+      border-top:1px solid var(--border);
+      padding:14px 0;
+    }
+
+    details:last-child{
+      border-bottom:1px solid var(--border);
+    }
+
+    summary{
+      cursor:pointer;
+      font-size:14px;
+      font-weight:500;
+      color: var(--text);
+      list-style:none;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:12px;
+      user-select:none;
+    }
+
+    summary::-webkit-details-marker{ display:none; }
+
+    summary::after{
+      content: '+';
+      font-size:18px;
+      font-weight:300;
+      color: var(--faint);
+      flex-shrink:0;
+      transition: transform 0.2s;
+    }
+
+    details[open] summary::after{
+      content: '−';
+    }
+
+    details p{
+      margin-top:10px;
+      margin-bottom:0;
+    }
+
+    /* Legal links */
+    .legal-list{
+      display:flex;
+      flex-direction:column;
+      gap:10px;
+      margin-top:4px;
+    }
+
+    .legal-item{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      font-size:14px;
+      color: var(--muted);
+    }
+
+    .legal-item a{
+      color: var(--text);
+    }
+
+    .legal-item .tag{
+      font-size:11px;
+      color: var(--faint);
+      border:1px solid var(--border);
+      padding:2px 7px;
+      border-radius:999px;
+    }
+
+    footer{
+      margin-top:22px;
+      border-top:1px solid rgba(255,255,255,0.1);
+      padding-top:16px;
+      display:flex;
+      justify-content:space-between;
+      flex-wrap:wrap;
+      font-size:13px;
+      color: var(--faint);
+      gap:8px;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div>
+        <h1 class="title">Splitter Support</h1>
+        <p class="subtitle">
+          Get help, find quick answers, or reach out — we're happy to assist.
+        </p>
+      </div>
+      <a class="back" href="https://daybreaklabs.dev">← Daybreak Labs</a>
+    </header>
+
+    <main class="grid">
+
+      <!-- Contact -->
+      <section class="card">
+        <h2>Contact Us</h2>
+        <p>
+          Have a question, bug report, or feedback? Email us directly or send a
+          quick message below.
+        </p>
+        <a class="email-link" href="mailto:contact@daybreaklabs.dev">contact@daybreaklabs.dev</a>
+        <p class="hint">Use the form to draft an email in your mail app.</p>
+
+        <form class="contact-form" id="support-form">
+          <label for="subject">
+            Topic
+            <select id="subject" name="subject">
+              <option value="General question">General question</option>
+              <option value="Bug report">Bug report</option>
+              <option value="Backup and restore help">Backup and restore help</option>
+              <option value="Feature request">Feature request</option>
+            </select>
+          </label>
+
+          <label for="message">
+            Message
+            <textarea id="message" name="message" placeholder="Tell us what happened and how we can help." required></textarea>
+          </label>
+
+          <button type="submit">Compose Email</button>
+        </form>
+      </section>
+
+      <!-- Legal -->
+      <aside class="card">
+        <h2>Legal</h2>
+        <div class="legal-list">
+          <div class="legal-item">
+            <a href="/splitter/privacy.html">Privacy Policy</a>
+          </div>
+          <div class="legal-item">
+            <a href="/terms.html">Terms of Service</a>
+            <span class="tag">updated</span>
+          </div>
+        </div>
+      </aside>
+
+      <!-- FAQ -->
+      <section class="card full">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-list">
+
+          <details>
+            <summary>Do I need an account or internet connection to use Splitter?</summary>
+            <p>
+              No account, no sign-in, and no internet required. Splitter works
+              offline and keeps your groups and expenses on your device, so it's
+              fast, private, and always available on trips, flights, and low-signal areas.
+            </p>
+          </details>
+
+          <details>
+            <summary>How do I split a bill unevenly or by exact amounts?</summary>
+            <p>
+              Choose a custom split and assign exact amounts per person. Splitter
+              automatically recalculates balances and simplifies who owes who, even
+              when one person paid for multiple items.
+            </p>
+          </details>
+
+          <details>
+            <summary>How can I share what everyone owes if they don't have the app?</summary>
+            <p>
+              Use Share on a group or settlement to send a clean summary by iMessage,
+              email, or any sharing app. Your friends do not need Splitter installed
+              to see the final amounts.
+            </p>
+          </details>
+
+          <details>
+            <summary>I changed phones. Can I keep my groups and history?</summary>
+            <p>
+              Yes. Create a backup from Settings before switching devices, then
+              restore it on your new phone. If you uninstall without a backup,
+              local data cannot be recovered.
+            </p>
+          </details>
+
+          <details>
+            <summary>How do ads work, and can I control ad personalization?</summary>
+            <p>
+              Splitter is free to download and use, and ads help keep it that way.
+              You can control ad personalization anytime in <strong>Settings → Ad
+              Preferences</strong>, and full data details are in the Privacy Policy.
+            </p>
+          </details>
+
+        </div>
+      </section>
+
+    </main>
+
+    <footer>
+      <div>© <span id="year"></span> Daybreak Labs LLC. All rights reserved.</div>
+      <div>
+        <a href="/splitter/privacy.html">Privacy</a> · <a href="/terms.html">Terms</a>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+    document.getElementById("support-form").addEventListener("submit", function (event) {
+      event.preventDefault();
+
+      var subject = document.getElementById("subject").value;
+      var message = document.getElementById("message").value.trim();
+      if (!message) {
+        return;
+      }
+
+      var mailSubject = "Splitter Support: " + subject;
+      var mailBody = message + "\n\n---\nSent from Splitter Support page";
+      var mailto = "mailto:contact@daybreaklabs.dev?subject=" +
+        encodeURIComponent(mailSubject) +
+        "&body=" +
+        encodeURIComponent(mailBody);
+
+      window.location.href = mailto;
+    });
+  </script>
+</body>
+</html>
