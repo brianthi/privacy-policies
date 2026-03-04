@@ -3,11 +3,11 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <meta name="description" content="Splitter support — get help, find answers, and contact us." />
-  <title>Splitter Support — Daybreak Labs</title>
+  <meta name="description" content="Score Keeper support — get help, find answers, and contact us." />
+  <title>Score Keeper Support — Daybreak Labs</title>
 
-  <meta property="og:title" content="Splitter Support" />
-  <meta property="og:description" content="Get help with Splitter, the local-first expense splitting app." />
+  <meta property="og:title" content="Score Keeper Support" />
+  <meta property="og:description" content="Get help with Score Keeper, the simple local scoreboard app." />
   <meta property="og:type" content="website" />
 
   <style>
@@ -207,7 +207,6 @@
       font-weight:300;
       color: var(--faint);
       flex-shrink:0;
-      transition: transform 0.2s;
     }
 
     details[open] summary::after{
@@ -239,14 +238,6 @@
       color: var(--text);
     }
 
-    .legal-item .tag{
-      font-size:11px;
-      color: var(--faint);
-      border:1px solid var(--border);
-      padding:2px 7px;
-      border-radius:999px;
-    }
-
     footer{
       margin-top:22px;
       border-top:1px solid rgba(255,255,255,0.1);
@@ -264,7 +255,7 @@
   <div class="wrap">
     <header>
       <div>
-        <h1 class="title">Splitter Support</h1>
+        <h1 class="title">Score Keeper Support</h1>
         <p class="subtitle">
           Get help, find quick answers, or reach out — we're happy to assist.
         </p>
@@ -290,7 +281,7 @@
             <select id="subject" name="subject">
               <option value="General question">General question</option>
               <option value="Bug report">Bug report</option>
-              <option value="Backup and restore help">Backup and restore help</option>
+              <option value="Game history / data help">Game history / data help</option>
               <option value="Feature request">Feature request</option>
             </select>
           </label>
@@ -309,10 +300,10 @@
         <h2>Legal</h2>
         <div class="legal-list">
           <div class="legal-item">
-            <a href="/splitter/privacy.html">Privacy Policy</a>
+            <a href="/score-keeper/privacy.html">Privacy Policy</a>
           </div>
           <div class="legal-item">
-            <a href="/splitter/terms.html">Terms of Service</a>
+            <a href="/score-keeper/terms.html">Terms of Service</a>
           </div>
         </div>
       </aside>
@@ -323,47 +314,47 @@
         <div class="faq-list">
 
           <details>
-            <summary>Do I need an account or internet connection to use Splitter?</summary>
+            <summary>Do I need an account or internet connection to use Score Keeper?</summary>
             <p>
-              No account, no sign-in, and no internet required. Splitter works
-              offline and keeps your groups and expenses on your device, so it's
-              fast, private, and always available on trips, flights, and low-signal areas.
+              No account, no sign-in, and no internet required. Score Keeper works
+              completely offline — your games, players, and scores stay on your
+              device, private and always available.
             </p>
           </details>
 
           <details>
-            <summary>How do I split a bill unevenly or by exact amounts?</summary>
+            <summary>Can I track multiple games or players at the same time?</summary>
             <p>
-              Choose a custom split and assign exact amounts per person. Splitter
-              automatically recalculates balances and simplifies who owes who, even
-              when one person paid for multiple items.
+              Yes. Score Keeper lets you run multiple games with any number of players,
+              each with custom names. Switch between them freely and keep everyone's
+              score straight without any confusion.
             </p>
           </details>
 
           <details>
-            <summary>How can I share what everyone owes if they don't have the app?</summary>
+            <summary>Can I save a game setup to reuse later?</summary>
             <p>
-              Use Share on a group or settlement to send a clean summary by iMessage,
-              email, or any sharing app. Your friends do not need Splitter installed
-              to see the final amounts.
+              Yes — save your favorite configurations as templates so you can jump back
+              into any game in seconds. No need to re-enter player names or settings
+              every time you play.
             </p>
           </details>
 
           <details>
-            <summary>I changed phones. Can I keep my groups and history?</summary>
+            <summary>Will I lose my game history if I delete the app?</summary>
             <p>
-              Yes. Create a backup from Settings before switching devices, then
-              restore it on your new phone. If you uninstall without a backup,
-              local data cannot be recovered.
+              Game history is stored locally on your device, so uninstalling the app
+              removes it. Note down or screenshot anything you want to keep before
+              deleting.
             </p>
           </details>
 
           <details>
-            <summary>How do ads work, and can I control ad personalization?</summary>
+            <summary>Why are there ads, and can I control them?</summary>
             <p>
-              Splitter is free to download and use, and ads help keep it that way.
-              You can control ad personalization anytime in <strong>Settings → Ad
-              Preferences</strong>, and full data details are in the Privacy Policy.
+              Score Keeper is free to download and use, and ads help keep it that way.
+              You can adjust ad personalization anytime in <strong>Settings → Ad
+              Preferences</strong>, and full details are in the Privacy Policy.
             </p>
           </details>
 
@@ -375,7 +366,7 @@
     <footer>
       <div>© <span id="year"></span> Daybreak Labs LLC. All rights reserved.</div>
       <div>
-        <a href="/splitter/privacy.html">Privacy</a> · <a href="/splitter/terms.html">Terms</a>
+        <a href="/score-keeper/privacy.html">Privacy</a> · <a href="/score-keeper/terms.html">Terms</a>
       </div>
     </footer>
   </div>
@@ -391,8 +382,8 @@
         return;
       }
 
-      var mailSubject = "Splitter Support: " + subject;
-      var mailBody = message + "\n\n---\nSent from Splitter Support page";
+      var mailSubject = "Score Keeper Support: " + subject;
+      var mailBody = message + "\n\n---\nSent from Score Keeper Support page";
       var mailto = "mailto:contact@daybreaklabs.dev?subject=" +
         encodeURIComponent(mailSubject) +
         "&body=" +
